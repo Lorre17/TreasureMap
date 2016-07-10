@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Find Hidden Treasure</title>
+  <style>
+   img {
+    width: 1024px;
+    }
+  </style>
+  <script>
+
+    function init() {
+      var map = document.getElementById("map");
+      map.onmousemove = showCoords;
+    }
+
+    function showCoords(e) {
+      var map = document.getElementById("cds");
+      var x = e.clientX;
+      var y = e.clientY;
+      map.innerHTML = "Map coordinates: " +
+        x + ", " + y;
+    }
+
+      window.onload = init;
+  </script>
+</head>
+
+<body> <img id="map" src="treasuremap.jpg"></body>
+<!--<body> <img id="map" src=map.jpg"></body>-->
+<p id="cds">Move mouse to find coordinates...</p>
+</html>
